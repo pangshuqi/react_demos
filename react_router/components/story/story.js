@@ -4,6 +4,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import {Link} from 'react-router';
+import Nav from '../nav/nav';
 import './story.css';
 
 class Story extends React.Component {
@@ -21,6 +22,7 @@ class Story extends React.Component {
     render() {
         return (
             <div>
+                <Nav />
                 <h2 style={{textAlign:'center'}}>这是story list</h2>
                 <ul id="storyList">
                     {this.state.storeList.map(function (item, index) {

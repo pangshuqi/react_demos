@@ -3,6 +3,9 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {hashHistory} from 'react-router';
+import Nav from '../nav/nav';
+
 import './travel.css';
 
 class Travel extends React.Component {
@@ -21,6 +24,7 @@ class Travel extends React.Component {
     render() {
         return (
             <div>
+                <Nav />
                 <h2 style={{textAlign:'center'}}>这是trave</h2>
                 <div className="btns">
                     {
@@ -34,8 +38,14 @@ class Travel extends React.Component {
         );
     }
 
+
     on_click(id) {
-        console.log(id);
+        if (id === 1) {
+            hashHistory.push("/StoryInfo/" + id);
+        } else {
+            alert('当前城市id为'+id+',点击辽宁可跳转到故事详情')
+        }
+
     }
 }
 

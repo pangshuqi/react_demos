@@ -4,11 +4,15 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import Nav from '../nav/nav'
 class Home extends React.Component {
     render() {
         return (
-            <h2 style={{textAlign:'center'}}>这是home</h2>
+            <div>
+                <Nav />
+                <h2 style={{textAlign:'center'}}>这是home</h2>
+            </div>
+
         );
     }
 }

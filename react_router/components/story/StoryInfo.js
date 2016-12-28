@@ -14,7 +14,7 @@ class StoryInfo extends React.Component {
 
         return (
             <div>
-                <h3 style={{textAlign:'center'}}>这是id为{this.props.params.id}的故事详情{this.props.params.name}</h3>
+                <h3 style={{textAlign:'center',marginTop:'25px'}}>这是id为{this.props.params.id}的故事详情{this.props.params.name}</h3>
             </div>
         )
     }
