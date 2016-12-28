@@ -1,0 +1,25 @@
+#nav {
+    width: 300px;
+    margin: 10px auto;
+}
+
+ul {
+    font-size: 32px;
+}
+
+#nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    font-size: inherit;
+    margin-left: 20px;
+    line-height: 1.5;
+}
+
+li:hover {
+    cursor: pointer;
+    color: #57d115;
+}
+
+.active {
+    color: #ff1713;
+}

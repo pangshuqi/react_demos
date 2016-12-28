@@ -1,0 +1,22 @@
+h1 {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    height: 40px;
+}
+
+ul li button {
+    margin-left: 50px;
+}
+
+.clear {
+    height: 25px;
+    margin: 20px 20px 20px 50px;
+    background: #ffb00f;
+    color: #fff;
+}

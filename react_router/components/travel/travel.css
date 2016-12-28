@@ -1,0 +1,10 @@
+.btns {
+    width: 220px;
+    margin: 45px auto;
+}
+
+button {
+    width: 45px;
+    height: 24px;
+    margin: 5px ;
+}
