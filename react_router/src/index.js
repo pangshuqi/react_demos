@@ -29,7 +29,7 @@ render((
         <Router history={hashHistory}>
             <Route path="/" component={App}>
                 <IndexRoute component={Home}/>
-                <Route path="/Story" component={Story}/>
+                <Route path="/Story" component={Story} />
                 <StoryInfo path="/StoryInfo/:id" component={StoryInfo}/>
                 <Route path="/Travel" component={Travel}/>
             </Route>
