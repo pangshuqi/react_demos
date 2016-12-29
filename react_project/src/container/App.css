@@ -1,0 +1,175 @@
+
+body {
+    background: #d7d7d7;
+}
+
+header {
+    /*background: #000;*/
+}
+
+section {
+    width: 100%;
+    max-width: 800px;
+    padding: 0 10px;
+    margin: 0 auto;
+    line-height: 1;
+}
+
+section label {
+    height: 50px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.note {
+    width: 300px;
+    height: 40px;
+    margin-left: 250px;
+    text-indent: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.24), 0 1px 6px rgba(0, 0, 0, 0.45) inset;
+    border: none;
+}
+
+.btns {
+    margin-left: 300px;
+    margin-top: 15px;
+}
+
+button {
+    border: 1px solid #fff;
+    height: 24px;
+    width: 90px;
+    text-align: center;
+    line-height: 24px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.hint {
+    background: red;
+    position: absolute;
+    z-index: 44;
+    top: 50px;
+    right: 30%;
+}
+
+/*div:last-child {*/
+/*padding: 7px 5px;*/
+/*border-radius: 5px;*/
+/*border: 2px solid #A9A9A9;*/
+/*box-shadow: 5px;*/
+/*background: #fff;*/
+/*text-align: center;*/
+/*font-size: 15px;*/
+/*}*/
+
+/*.test {*/
+/*width: 100%;*/
+/*height: 20px;*/
+/*position: relative;*/
+/*}*/
+
+/*span {*/
+/*width: 0;*/
+/*height: 0;*/
+/*overflow: hidden;*/
+/*position: absolute;*/
+/*}*/
+
+/*span .bot {*/
+
+/*width: 0;*/
+/*height: 0;*/
+/*left: 12px;*/
+/*top: 6px;*/
+/*}*/
+
+/*span .top {*/
+
+/*width: 0;*/
+/*height: 0;*/
+/*left: 14px;*/
+/*top: 10px;*/
+/*}*/
+
+ol {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    max-width: 800px;
+    height: 45px;
+    margin: 0 auto;
+    background: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+li {
+    display: inline-block;
+    line-height: 40px;
+    font-size: 15px;
+    color: #6c6c6c;
+}
+
+.circle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 5px;
+    background: #E6E6FA;
+}
+
+main {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+h2 {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+ul {
+    width: 800px;
+    margin: 0 auto;
+}
+
+ul li {
+    display: block;
+    height: 45px;
+    line-height: 45px;
+}
+
+ul li input, ul li p, ul li button {
+    display: inline-block;
+}
+
+ul li p {
+    color: #ff2cf9;
+}
+
+ul li button {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+}
+
+
