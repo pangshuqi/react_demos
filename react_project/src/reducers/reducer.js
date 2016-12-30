@@ -3,6 +3,7 @@
  */
 
 import { combineReducers } from 'redux';
+import 'react-router';
 import {
     Add_Todo,
     Delete_Todo,
@@ -10,7 +11,8 @@ import {
     Change_Doing_To_Done,
     Change_Doing_To_Todo,
     Change_Done_To_Doing,
-    Search
+    Search,
+    LOGIN
 } from '../actions/action';
 
 let todos;
@@ -31,6 +33,7 @@ function todoList(state = todos, action) {
          *  JSON.stringify进行对象深拷贝
          */
         case Add_Todo:
+            console.log(action);
             localStorage.setItem('todos', JSON.stringify([
                 ...state, {
                     todo: action.text,
@@ -51,6 +54,7 @@ function todoList(state = todos, action) {
          *  将todo转为doing状态，注意action.index的类型转换
          */
         case Change_Todo_To_Doing:
+            console.log('index', action.index);
             localStorage.setItem('todos', JSON.stringify([
                 ...state.slice(0, action.index),
                 {
@@ -164,6 +168,26 @@ function todoList(state = todos, action) {
             return state.filter(item=> item.todo.match(reg));
         default:
             return state;
+    }
+}
+
+function isLogIn() {
+    if (!localStorage.token) {
+        replace({
+            pathname: '/login'
+        })
+    }
+}
+
+function logInfo(action) {
+    switch (action.type) {
+        case LOGIN:
+            replace({
+                pathname: '/'
+            });
+            break;
+        default:
+            return state
     }
 }
 
