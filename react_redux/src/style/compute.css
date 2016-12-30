@@ -1,0 +1,27 @@
+.compute_box {
+    margin: 0 auto;
+    width: 400px;
+}
+
+span {
+    display: block;
+    height: 100px;
+    width: 400px;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff1624;
+    border: 1px solid #000;
+}
+
+button {
+    width: 100px;
+    height: 25px;
+    margin-left: 150px;
+    margin-top: 15px;
+    border-radius: 5px;
+    background: #f58309;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
