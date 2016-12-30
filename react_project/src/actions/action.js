@@ -11,6 +11,7 @@ export const Change_Done_To_Doing = 'Change_Done_To_Doing';
 export const Change_Doing_To_Todo = 'Change_Doing_To_Todo';
 export const Search='Search';
 export const Delete_Todo='Delete_Todo';
+export const LOGIN='LOGIN';
 /*
  * action 创建函数
  * @method  addTodo添加新事项
@@ -80,5 +81,11 @@ export function deleteTodo(index) {
     return {
         type: Delete_Todo,
         index
+    }
+}
+
+export function login() {
+    return {
+        type: LOGIN
     }
 }
