@@ -19,11 +19,11 @@ const store = configureStore();
 render(
     <Provider store={store}>
         <Router history={hashHistory}>
-            <Route path="/" component={App}>
+            <Route path="/" component={App} >
                 <IndexRoute component={AllMemosRoute}/>
                 <Route path="/todo" component={TodoRoute}/>
                 <Route path="/doing" component={DoingRoute}/>
-                <Route path="/done" component={DoneRoute}/>
+                <Route path="/done" component={DoneRoute} />
             </Route>
         </Router>
     </Provider>,
