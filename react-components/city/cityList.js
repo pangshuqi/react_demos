@@ -8,6 +8,7 @@ export default class City extends React.Component {
             writeCityList: [],
             cityList: [],
             showPanel: false,
+            isWarn: false,
             isWrite: true,
             searchTabs: [
                 {title: 'ABCD', isFocus: true},
@@ -67,14 +68,30 @@ export default class City extends React.Component {
 
         let searchDivStyle = this.state.isWrite ? {display: 'none'} : {display: 'block', marginTop: '20px'};
         let writeDivStyle = this.state.isWrite ? {display: 'block'} : {display: 'none'};
+        let warnStyle = this.state.isWarn ? {
+            display: 'block',
+            position: 'absolute',
+            left: '100%',
+            top: '0',
+            width:'260px',
+            height:'25px',
+            lineHeight:'25px',
+            paddingLeft:'15px',
+            color:'#F61506'
+        } : {
+            display: 'none'
+        };
         return <div className={this.props.class}>
-            <div>
+            <div style={{position: 'relative'}}>
                 <input type="text" ref="city"
-                       style={{width: '100%', height: '25px', fontSize: '14px', paddingLeft: '10px'}}
+                       style={{ height: '25px', fontSize: '14px', paddingLeft: '10px'}}
                        onChange={this.cityChange}
                        onKeyDown={this.cityKeyDown}
                        onFocus={this.cityFocus}
                        onBlur={this.cityBlur}/>
+                <div className="warnInfo" style={warnStyle}>
+                    当前输入城市不存在，请您重新选择
+                </div>
             </div>
             <div style={panelStyle}>
                 <button onClick={this.closeCityList} style={closeBtnStyle}>关闭</button>
@@ -179,8 +196,20 @@ export default class City extends React.Component {
     }
 
     cityBlur(e) {
-        console.log(e);
+        // console.log(e);
         //this.setState({showPanel: false});
+        let cityName = this.refs.city.value;
+        let warn = true;
+        for (let city of chineseCities) {
+            if (city.name == cityName || cityName == '') {
+                this.setState({city, isWarn: false});
+                warn = false;
+                return;
+            }
+        }
+        if (warn) {
+            this.setState({isWarn: true});
+        }
     }
 
     closeCityList() {
@@ -216,13 +245,13 @@ export default class City extends React.Component {
 
     // 点击按拼音搜索的城市
     searchCity_click(city) {
-        this.setState({city, cityList: [], showPanel: false});
+        this.setState({city, cityList: [], showPanel: false, isWarn: false});
         this.refs.city.value = city.name;
     }
 
     // 点击手输提示的城市
     cityClick(city) {
-        this.setState({city, cityList: [], showPanel: false});
+        this.setState({city, cityList: [], showPanel: false, isWarn: false});
         this.refs.city.value = city.name;
     }
 
@@ -240,7 +269,8 @@ export default class City extends React.Component {
         }
         else {
             this.setState({
-                isWrite: false
+                isWrite: false,
+                isWarn: false
             })
         }
         let city = {
